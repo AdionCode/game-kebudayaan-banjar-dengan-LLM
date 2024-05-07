@@ -19,6 +19,7 @@ public class PlayerCotroller : MonoBehaviour
     // public access
     public bool playerInArea;
     [SerializeField] string playerCollideWith;
+    [SerializeField] GameObject collideGameObject;
 
     // Artifact Stuff
     [SerializeField] string artifactName;
@@ -26,7 +27,7 @@ public class PlayerCotroller : MonoBehaviour
 
     // Packet
     public GameObject artifactInPocket;
-    bool playerHaveItem;
+    [SerializeField] bool playerHaveItem;
     [SerializeField] Packet PacketScript;
 
     // Artifact Item
@@ -65,27 +66,42 @@ public class PlayerCotroller : MonoBehaviour
             audioSource.Stop(); 
         }
 
+        
         // Artifact
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (playerCollideWith == "Artifact" && playerInArea)
+            // Artifact Display
+            if (playerCollideWith == "Artifact" && playerInArea && ArtifactItemScript != null)
             {
-                ArtifactScript.Nyalakan();
+                if (ArtifactItemScript.artifactId == ArtifactScript.artifactId)
+                {
+                    ArtifactScript.Nyalakan();
+                    Destroy(artifactInPocket);
+                    GM.AddScore();
+                } 
+                else
+                {
+
+                }
             }
-            else if (playerCollideWith == "Packet" && playerInArea)
+
+            // Packet
+            if (playerCollideWith == "Packet" && playerInArea && !playerHaveItem)
             {
                 PacketScript.Nyalakan();
             }
 
-            Debug.Log(playerHaveItem);
+            // Artifact Item
             if (playerHaveItem)
             {
-                GM.SpawnArtifact(0, this.gameObject.transform.position);
+                ArtifactItemScript.DropItem();
                 playerHaveItem = false;
             }
-            else
+            else if (!playerHaveItem && playerInArea && playerCollideWith == "ArtifactItem") 
             {
                 //player pick item
+                ArtifactItemScript = collideGameObject.gameObject.GetComponent<ArtifactItem>();
+                artifactInPocket = collideGameObject.gameObject;
                 ArtifactItemScript.pickUpItem();
                 playerHaveItem = true;
             }
@@ -118,8 +134,7 @@ public class PlayerCotroller : MonoBehaviour
         // Artifact Item
         if (collision.CompareTag("ArtifactItem"))
         {
-            ArtifactItemScript = collision.gameObject.GetComponent<ArtifactItem>();
-            artifactInPocket = collision.gameObject;
+            collideGameObject = collision.gameObject;
         }
 
     }

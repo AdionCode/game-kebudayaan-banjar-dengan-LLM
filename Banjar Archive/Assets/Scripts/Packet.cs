@@ -8,16 +8,19 @@ public class Packet : MonoBehaviour
     [SerializeField] Sprite baru;
     [SerializeField] GameObject artifact;
 
-    [SerializeField] SpriteRenderer SpriteRender;
-
+    [SerializeField] GameObject GM;
+    [SerializeField] GameMaster gmScript;
     private void Start()
     {
-        SpriteRender = GetComponent<SpriteRenderer>();
+        GM = GameObject.FindGameObjectWithTag("GameMaster");
+        gmScript = GM.GetComponent<GameMaster>();
+
+        
     }
 
     public void Nyalakan()
     {
-        Instantiate(artifact, this.gameObject.transform.position, Quaternion.identity);
+        gmScript.SpawnArtifact(0, this.gameObject.transform.position);
         Destroy(this.gameObject);
     }
 }

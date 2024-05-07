@@ -6,7 +6,7 @@ public class Artifact : MonoBehaviour
 {
     [SerializeField] GameObject lawas;
     [SerializeField] GameObject hanyar;
-    [SerializeField] int idArtifact;
+    public string artifactId;
 
     [TextArea] public string deskripsi;
     bool playerInArea;
@@ -16,4 +16,5 @@ public class Artifact : MonoBehaviour
         lawas.SetActive(false);
         hanyar.SetActive(true);
     }
+
 }

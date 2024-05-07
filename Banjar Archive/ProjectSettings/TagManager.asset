@@ -4,9 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Artifact
   - Packet
   - ArtifactItem
+  - GameMaster
+  - Task
+  - Artifact
   layers:
   - Default
   - TransparentFX
