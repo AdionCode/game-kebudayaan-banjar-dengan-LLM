@@ -6,10 +6,20 @@ public class Artifact : MonoBehaviour
 {
     [SerializeField] GameObject lawas;
     [SerializeField] GameObject hanyar;
+    [SerializeField] GameObject Canvas;
     public string artifactId;
 
     [TextArea] public string deskripsi;
-    bool playerInArea;
+
+    public void TampilkanDeskripsi()
+    {
+
+    }
+
+    public void TampilkanKey(bool isPlayerNear)
+    {
+        Canvas.SetActive(isPlayerNear);
+    }
 
     public void Nyalakan()
     {

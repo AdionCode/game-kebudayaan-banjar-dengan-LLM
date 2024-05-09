@@ -66,7 +66,8 @@ public class PlayerCotroller : MonoBehaviour
             audioSource.Stop(); 
         }
 
-        
+
+
         // Artifact
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -123,6 +124,7 @@ public class PlayerCotroller : MonoBehaviour
         {
             artifactName = collision.gameObject.GetComponent<Artifact>().deskripsi;
             ArtifactScript = collision.gameObject.GetComponent<Artifact>();
+            ArtifactScript.TampilkanKey(true);
         }
 
         // Packet
@@ -140,6 +142,10 @@ public class PlayerCotroller : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (collision.gameObject.CompareTag("Artifact"))
+        {
+            ArtifactScript.TampilkanKey(false);
+        }
         playerInArea = false;
     }
 }
