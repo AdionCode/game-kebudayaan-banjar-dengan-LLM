@@ -9,6 +9,7 @@ TagManager:
   - GameMaster
   - Task
   - Artifact
+  - Jawaban
   layers:
   - Default
   - TransparentFX

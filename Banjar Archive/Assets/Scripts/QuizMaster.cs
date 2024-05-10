@@ -25,18 +25,27 @@ public class QuizMaster : MonoBehaviour
         // set variable ke game
         question.text = data[idData].question;
 
-        //while (numbers.Count > 0)
-        //{
-        //    //int numRan = Random.Range(0, numbers.Count);
-        //    ////answer[numbers[numRan]].sprite = data[idData].answer[a];
-        //    //Debug.Log(a++);
-        //    //numbers.RemoveAt(numRan);
-        //}
+        while (numbers.Count > 0) // Hati Hati Loop
+        {
+            int numRan = Random.Range(0, numbers.Count);
+            if (a == 0)
+            {
+                answer[numbers[numRan]].tag = "Jawaban";
+            }
+            answer[numbers[numRan]].sprite = data[idData].answer[a];
+            a++;
+            numbers.RemoveAt(numRan); // Jangan Delete
+        }
+
+
     }
 
-    public void cekJawaban()
+    public void cekJawaban(GameObject test)
     {
-
+        if (test.CompareTag("Jawaban"))
+        {
+            Debug.Log("Adalah Benar");
+        }
     }
 
     private void Update()
@@ -45,9 +54,13 @@ public class QuizMaster : MonoBehaviour
         {
             int numRan = Random.Range(0, numbers.Count);
             //answer[numbers[numRan]].sprite = data[idData].answer[a];
-            Debug.Log(a++);
+            Debug.Log(a++ + " | " + numRan);
             Debug.Log(answer[numbers[numRan]]);
             numbers.RemoveAt(numRan);
+        }
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            Debug.Log(Random.Range(0, numbers.Count));
         }
     }
 

@@ -11,6 +11,8 @@ public class GameMaster : MonoBehaviour
     public int score;
     public int maxScore;
 
+    [SerializeField] GameObject Quiz;
+
     private void Awake()
     {
         ArtifactDisplay = GameObject.FindGameObjectsWithTag("Artifact");
@@ -29,7 +31,7 @@ public class GameMaster : MonoBehaviour
     {
         if (score == maxScore)
         {
-            Debug.Log("Selamat Selesai!");
+            Quiz.SetActive(true);
         }
     }
 
