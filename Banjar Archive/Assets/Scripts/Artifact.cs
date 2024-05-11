@@ -10,15 +10,11 @@ public class Artifact : MonoBehaviour
     public string artifactId;
 
     [TextArea] public string deskripsi;
+    [TextArea] public string aiPrompt;
 
     public void TampilkanDeskripsi()
     {
 
-    }
-
-    public void TampilkanKey(bool isPlayerNear)
-    {
-        Canvas.SetActive(isPlayerNear);
     }
 
     public void Nyalakan()

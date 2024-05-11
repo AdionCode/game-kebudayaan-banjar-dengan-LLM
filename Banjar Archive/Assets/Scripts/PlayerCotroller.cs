@@ -1,7 +1,10 @@
+using LLMUnity;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor.Experimental;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerCotroller : MonoBehaviour
 {
@@ -16,32 +19,52 @@ public class PlayerCotroller : MonoBehaviour
     // Music
     public AudioSource audioSource;
 
-    // public access
+    // UI
+    [SerializeField] TMP_Text TMP;
+
+    [Header("Public")]
     public bool playerInArea;
     [SerializeField] string playerCollideWith;
     [SerializeField] GameObject collideGameObject;
 
+    [Header("Artifact Stuff")]
     // Artifact Stuff
     [SerializeField] string artifactName;
     [SerializeField] Artifact ArtifactScript;
 
+    [Header("Packet")]
     // Packet
     public GameObject artifactInPocket;
     [SerializeField] bool playerHaveItem;
     [SerializeField] Packet PacketScript;
 
+    [Header("Artifact Item")]
     // Artifact Item
     [SerializeField] ArtifactItem ArtifactItemScript;
 
+    [Header("Game Master")]
     // Game Master
     [SerializeField] GameMaster GM;
 
+    [Header("Test")]
+    // LLM
+    [SerializeField] public LLM llm;
+
     private void Start()
     {
+        llm.SetPrompt("your name is Alpha now");
         playerHaveItem = false;
+        TMP.text = "";
     }
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            llm.SetPrompt("Your name is mario now");
+        }
+        // UI 
+
+
         // Movement Controller
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
@@ -119,12 +142,13 @@ public class PlayerCotroller : MonoBehaviour
     {
         playerInArea = true;
         playerCollideWith = collision.tag;
+
         // Artifact Display
         if (collision.CompareTag("Artifact"))
         {
+            TMP.text = collision.name;
             artifactName = collision.gameObject.GetComponent<Artifact>().deskripsi;
             ArtifactScript = collision.gameObject.GetComponent<Artifact>();
-            ArtifactScript.TampilkanKey(true);
         }
 
         // Packet
@@ -142,10 +166,7 @@ public class PlayerCotroller : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Artifact"))
-        {
-            ArtifactScript.TampilkanKey(false);
-        }
+        TMP.text = "";
         playerInArea = false;
     }
 }

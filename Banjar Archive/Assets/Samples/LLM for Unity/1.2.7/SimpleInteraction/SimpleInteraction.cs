@@ -1,12 +1,15 @@
 using UnityEngine;
 using LLMUnity;
 using UnityEngine.UI;
+using TMPro;
 
 namespace LLMUnitySamples
 {
     public class SimpleInteraction : MonoBehaviour
     {
         public LLM llm;
+        //public TMP_InputField playerText;
+        //public TMP_Text AIText;
         public InputField playerText;
         public Text AIText;
 
