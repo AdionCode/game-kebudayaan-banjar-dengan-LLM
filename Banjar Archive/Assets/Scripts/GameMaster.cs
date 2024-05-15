@@ -23,8 +23,6 @@ public class GameMaster : MonoBehaviour
     private void Start()
     {
         score = 0;
-        
-        
     }
 
     private void Update()

@@ -6,6 +6,13 @@ public class PauseGame : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
     bool isPaused = false;
+    PlayerCotroller controller;
+
+    private void Awake()
+    {
+        controller = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCotroller>();
+    }
+
     void Start()
     {
         
@@ -25,10 +32,12 @@ public class PauseGame : MonoBehaviour
         pauseMenu.SetActive(!isPaused);
         if (!isPaused)
         {
+            controller.enabled = false;
             Time.timeScale = 0f;
         } 
         else
         {
+            controller.enabled = true;
             Time.timeScale = 1f;
         }
         isPaused = !isPaused;

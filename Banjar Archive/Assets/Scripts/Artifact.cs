@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class Artifact : MonoBehaviour
 {
+    [Header("Game Object")]
     [SerializeField] GameObject lawas;
     [SerializeField] GameObject hanyar;
-    [SerializeField] GameObject Canvas;
     public string artifactId;
 
+    [Header("Detail Artifak")]
+    public string judul;
+    public Sprite image;
     [TextArea] public string deskripsi;
     [TextArea] public string aiPrompt;
 
+    
     public void TampilkanDeskripsi()
     {
 

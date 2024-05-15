@@ -46,22 +46,22 @@ public class PlayerCotroller : MonoBehaviour
     // Game Master
     [SerializeField] GameMaster GM;
 
-    [Header("Test")]
+    [Header("LLM Stuff")]
     // LLM
-    [SerializeField] public LLM llm;
+    [SerializeField] public GameObject llm;
+    LLM llmScript;
+    InfoUIMaster llmUi;
+    public GameObject uiLLM;
 
     private void Start()
     {
-        llm.SetPrompt("your name is Alpha now");
         playerHaveItem = false;
         TMP.text = "";
+        llmScript = llm.GetComponent<LLM>();
+        llmUi = llm.GetComponent<InfoUIMaster>();
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            llm.SetPrompt("Your name is mario now");
-        }
         // UI 
 
 
@@ -99,6 +99,7 @@ public class PlayerCotroller : MonoBehaviour
             {
                 if (ArtifactItemScript.artifactId == ArtifactScript.artifactId)
                 {
+                    SetupLLM();
                     ArtifactScript.Nyalakan();
                     Destroy(artifactInPocket);
                     GM.AddScore();
@@ -147,7 +148,7 @@ public class PlayerCotroller : MonoBehaviour
         if (collision.CompareTag("Artifact"))
         {
             TMP.text = collision.name;
-            artifactName = collision.gameObject.GetComponent<Artifact>().deskripsi;
+            artifactName = collision.gameObject.name;
             ArtifactScript = collision.gameObject.GetComponent<Artifact>();
         }
 
@@ -168,5 +169,12 @@ public class PlayerCotroller : MonoBehaviour
     {
         TMP.text = "";
         playerInArea = false;
+    }
+
+    void SetupLLM()
+    {
+        uiLLM.SetActive(true);
+        llmScript.SetPrompt(ArtifactScript.aiPrompt);
+        llmUi.SetUiArtifak(ArtifactScript.image, artifactName);
     }
 }
