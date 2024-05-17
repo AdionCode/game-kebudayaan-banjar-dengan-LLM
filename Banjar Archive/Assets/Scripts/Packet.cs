@@ -14,8 +14,6 @@ public class Packet : MonoBehaviour
     {
         GM = GameObject.FindGameObjectWithTag("GameMaster");
         gmScript = GM.GetComponent<GameMaster>();
-
-        
     }
 
     public void Nyalakan()
