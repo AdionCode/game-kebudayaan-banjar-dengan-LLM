@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Task : MonoBehaviour
 {
@@ -9,12 +11,20 @@ public class Task : MonoBehaviour
     public bool taskCompleted = false;
     [SerializeField] float taskTime;
     [SerializeField] GameMaster GM;
+    [SerializeField] Image filler;
+    public int maximum;
+    public int current = 0;
 
     private void Awake()
     {
         GM = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
     }
     // Update is called once per frame
+
+    private void Start()
+    {
+        maximum = (int)taskTime;
+    }
     void Update()
     {
         if (playerInside)
@@ -33,6 +43,9 @@ public class Task : MonoBehaviour
             GM.AddScore();
             Destroy(gameObject);
         }
+
+        float fillAmount = time / (float)maximum;
+        filler.fillAmount = fillAmount;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -19,7 +19,10 @@ public class NPC : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Hewlllo");
+        if (collision.CompareTag("Player"))
+        {
+
+        }
         
     }
 }
