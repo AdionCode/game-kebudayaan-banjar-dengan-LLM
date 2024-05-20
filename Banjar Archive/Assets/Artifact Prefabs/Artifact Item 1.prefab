@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05936a176b36fd1419667b87fad26003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  artifactId: 2
+  artifactId: 1
   Player: {fileID: 0}
 --- !u!58 &5513399148742045848
 CircleCollider2D:

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Xml.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class QuizMaster : MonoBehaviour
@@ -13,12 +14,16 @@ public class QuizMaster : MonoBehaviour
     [SerializeField] List<int> numbers = new List<int>();
 
     int a = 0;
-
-
     int idData;
+
+    [SerializeField] Sprite jawabanSalah;
+
+    Scene currentScene;
+    [SerializeField] LoadingScene scene;
 
     private void Start()
     {
+        currentScene = SceneManager.GetActiveScene();
         // Milih quiz random
         idData = Random.Range(0, data.Length);
 
@@ -44,7 +49,18 @@ public class QuizMaster : MonoBehaviour
     {
         if (test.CompareTag("Jawaban"))
         {
-            Debug.Log("Adalah Benar");
+            if (scene != null && currentScene.name == "Tutorial")
+            {
+                scene.LoadScene(2);
+            }
+            else
+            {
+                SceneManager.LoadScene(3);
+            }
+        }
+        else
+        {
+            test.GetComponent<Image>().sprite = jawabanSalah;
         }
     }
 

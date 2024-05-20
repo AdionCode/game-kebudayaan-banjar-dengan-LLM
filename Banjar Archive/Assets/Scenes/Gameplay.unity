@@ -663,7 +663,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 782df53847c25ee4b88c749486540299, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -777,7 +777,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -466173330, guid: 10b24c37d8d263a4d92dac2f31b76731, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5506,7 +5506,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 782df53847c25ee4b88c749486540299, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5735,7 +5735,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hello How Can I help You
+  m_Text: Hello there, i can explain you all you need to know about the artifact
+    in this museum. Feel free type below.
 --- !u!210 &356526248
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -7050,7 +7051,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enter text...
+  m_Text: Ask the book his knowledge...
 --- !u!222 &647720214
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7627,7 +7628,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f3fb18cc3ddd50d4f9d8758d580afb6c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -15728,6 +15729,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 39903418505683336, guid: 798d780c90ab1794a931e19ec2b790bd, type: 3}
+      propertyPath: artifactId
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2095854995272246635, guid: 798d780c90ab1794a931e19ec2b790bd, type: 3}
       propertyPath: m_Name
       value: Artifact Display 2
@@ -16047,7 +16052,6 @@ Transform:
   - {fileID: 958895549}
   - {fileID: 1879448922}
   - {fileID: 3069221786449687396}
-  - {fileID: 1659043288}
   - {fileID: 1011064545}
   - {fileID: 1234291273}
   m_Father: {fileID: 0}
@@ -16580,7 +16584,51 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5309412299648089886, guid: cb778c3cc0647a24f96309774fb12dac, type: 3}
       propertyPath: m_Name
-      value: Artifact Display (1)
+      value: Panting
+      objectReference: {fileID: 0}
+    - target: {fileID: 6068293365679127549, guid: cb778c3cc0647a24f96309774fb12dac, type: 3}
+      propertyPath: image
+      value: 
+      objectReference: {fileID: 21300000, guid: 4f272d2833b9cc04ca15efcf6a2fbbd2, type: 3}
+    - target: {fileID: 6068293365679127549, guid: cb778c3cc0647a24f96309774fb12dac, type: 3}
+      propertyPath: judul
+      value: Panting
+      objectReference: {fileID: 0}
+    - target: {fileID: 6068293365679127549, guid: cb778c3cc0647a24f96309774fb12dac, type: 3}
+      propertyPath: aiPrompt
+      value: "You play the role of a magic book that will explain the culture of
+        these artifacts. Do not provide information that is not in the following
+        explanation. \r\n\r\ninformation about the panting musical instrument as
+        follows\r\n\r\na traditional musical instrument of the Dayak tribe known
+        as panting. Panting is made of a whole log that is hollowed out in the center,
+        in the form of a cylindrical tube with elongated holes. The wood used is
+        not just any wood, but a type of wood that is not too hard such as ulin or
+        meranti.\r\nThe way to play panting is also very distinctive. Two sticks
+        are needed, one to hit the outside of the panting, and the other to hit the
+        inside of the hole. The play of these two sticks produces a low-pitched but
+        strong rhythmic beat, echoing in the interior of the forest.\r\nThe rhythm
+        of panting is not just for entertainment. For the Dayak people, panting has
+        an important function in their traditional ceremonies such as religious,
+        harvest and wedding ceremonies. Often, the rhythm of panting is combined
+        with the sound of garantung and traditional dances, creating a mesmerizing
+        cultural performance.More than that, panting symbolizes the strength and
+        togetherness of the Dayak people. Its steady rhythm is believed to drive
+        away evil spirits and bring salvation. This musical instrument symbolizes
+        the cultural heritage and identity of the Dayak tribe in Kalimantan that
+        has been passed down from generation to generation.\r\nToday, panting is
+        still preserved and is the pride of the Dayak community. This musical instrument
+        is always present in their entertainment events and cultural performances.
+        Every beat of the panting rhythm is a reminder of the strong and sturdy cultural
+        roots, telling the story and uniqueness of the Dayak people in the interior
+        of Kalimantan.\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6068293365679127549, guid: cb778c3cc0647a24f96309774fb12dac, type: 3}
+      propertyPath: deskripsi
+      value: Panting adalah alat musik tradisional dari kalimantan
+      objectReference: {fileID: 0}
+    - target: {fileID: 6068293365679127549, guid: cb778c3cc0647a24f96309774fb12dac, type: 3}
+      propertyPath: artifactId
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6102466988585600965, guid: cb778c3cc0647a24f96309774fb12dac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16896,7 +16944,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d4f515bf1ba2d9c4ea1f0327b4558332, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -17129,6 +17177,8 @@ MonoBehaviour:
   data:
   - {fileID: 11400000, guid: 1787597abf73c8b46ac323a66b2b5f9e, type: 2}
   numbers: 000000000100000002000000
+  jawabanSalah: {fileID: 999030064, guid: 10b24c37d8d263a4d92dac2f31b76731, type: 3}
+  scene: {fileID: 0}
 --- !u!1 &1613421181
 GameObject:
   m_ObjectHideFlags: 0
@@ -17403,11 +17453,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!4 &1659043288 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8109048277552426415, guid: e0d76ea104553b943937f3836ed7c520, type: 3}
-  m_PrefabInstance: {fileID: 3372445700546029974}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1664624034
 GameObject:
   m_ObjectHideFlags: 0
@@ -17526,7 +17571,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 782df53847c25ee4b88c749486540299, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -17996,12 +18041,45 @@ MonoBehaviour:
   ignoreEos: 0
   nKeep: -1
   stop: []
-  playerName: user
-  AIName: assistant
-  prompt: A chat between a curious human and an artificial intelligence assistant.
-    The assistant gives helpful, detailed, and polite answers to the human's questions.
+  playerName: Player
+  AIName: Magical Book
+  prompt: 'Imagine you are magical book that can explain anything you want to know.
+    As the pages turn, the book begins to describe panting in detail:
+
+
+
+    Panting
+    is a traditional musical instrument native to South Kalimantan, Indonesia, known
+    for its unique shape and playing technique. Made of wood and resembling a small
+    mandolin or gambus, panting often features intricate carvings that depict local
+    flora and fauna, reflecting the rich cultural heritage of the Dayak people. The
+    strings of the panting, which can vary in number, are typically made of steel
+    wire or nylon.
+
+
+
+    Playing the panting involves plucking the strings with
+    the fingers. This technique requires precision and speed, as the rhythms and
+    melodies produced are often fast and dynamic. Panting is commonly played during
+    various traditional ceremonies, cultural festivals, and rituals in South Kalimantan.
+    Its music usually accompanies traditional dances or other artistic performances.
+    Additionally, panting plays a significant role in narrating local folklore and
+    historical tales through its songs.
+
+
+
+    Panting is a symbol of South Kalimantan''s
+    cultural wealth that must be preserved and cherished. By understanding and learning
+    more about this musical instrument, we can better appreciate the cultural heritage
+    of Indonesia.
+
+
+
+    The magic book closes with a gentle glow, having shared
+    its knowledge about panting, leaving you with a deeper appreciation for this
+    beautiful and culturally rich instrument.'
   setNKeepToPrompt: 1
-  chatTemplate: mistral chat
+  chatTemplate: phi
   grammarString: 
   numThreads: -1
   numGPULayers: 0
@@ -18010,11 +18088,11 @@ MonoBehaviour:
   asynchronousStartup: 0
   remote: 0
   killExistingServersOnStart: 1
-  model: mistral-7b-instruct-v0.2.Q4_K_M.gguf
+  model: phi-2.Q4_K_M.gguf
   lora: 
   contextSize: 512
   batchSize: 512
-  SelectedModel: 1
+  SelectedModel: 3
   modelProgress: 1
   modelCopyProgress: 1
   modelHide: 1
@@ -18048,6 +18126,8 @@ MonoBehaviour:
   gambarJudul: {fileID: 47558720}
   judul: {fileID: 1886797544}
   uiLLM: {fileID: 531929140}
+  defaultImg: {fileID: -466173330, guid: 10b24c37d8d263a4d92dac2f31b76731, type: 3}
+  defaultPrompt: You are magical book
 --- !u!1 &1847742886
 GameObject:
   m_ObjectHideFlags: 0
@@ -18477,8 +18557,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -340.4689, y: -141.57}
-  m_SizeDelta: {x: 461.3022, y: 283.13}
+  m_AnchoredPosition: {x: -340.4689, y: -121.29634}
+  m_SizeDelta: {x: 461.3022, y: 242.5826}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1886797544
 MonoBehaviour:
@@ -18500,13 +18580,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Kebudayaan Banjar adalah budaya yang berasal dari suku Banjar, yang sebagian
-    besar mendiami daerah Kalimantan Selatan, Indonesia. Kebudayaan ini kaya akan
-    tradisi, seni, adat istiadat, serta kepercayaan yang telah diwariskan dari generasi
-    ke generasi.
+  m_text: Magical Book
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 58ccdea4e2f309c41af998b16c94320a, type: 2}
+  m_sharedMaterial: {fileID: 4093252228730687588, guid: 58ccdea4e2f309c41af998b16c94320a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -18530,14 +18607,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -18888,6 +18965,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1928721549}
   m_CullTransparentMesh: 1
+--- !u!1001 &1941702868
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2035754160856436409, guid: 1d3a98d1c1c73b842b5c8d47cb6647cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035754160856436409, guid: 1d3a98d1c1c73b842b5c8d47cb6647cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035754160856436409, guid: 1d3a98d1c1c73b842b5c8d47cb6647cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.061863616
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035754160856436409, guid: 1d3a98d1c1c73b842b5c8d47cb6647cd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035754160856436409, guid: 1d3a98d1c1c73b842b5c8d47cb6647cd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035754160856436409, guid: 1d3a98d1c1c73b842b5c8d47cb6647cd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035754160856436409, guid: 1d3a98d1c1c73b842b5c8d47cb6647cd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035754160856436409, guid: 1d3a98d1c1c73b842b5c8d47cb6647cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035754160856436409, guid: 1d3a98d1c1c73b842b5c8d47cb6647cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035754160856436409, guid: 1d3a98d1c1c73b842b5c8d47cb6647cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8284039716990872525, guid: 1d3a98d1c1c73b842b5c8d47cb6647cd, type: 3}
+      propertyPath: m_Name
+      value: Task 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1d3a98d1c1c73b842b5c8d47cb6647cd, type: 3}
 --- !u!1 &1983374488
 GameObject:
   m_ObjectHideFlags: 0
@@ -19197,63 +19331,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3570213082890554550, guid: a455a6b217489e8498bd479852855f90, type: 3}
   m_PrefabInstance: {fileID: 3678883020962670546}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &3372445700546029974
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1106430049}
-    m_Modifications:
-    - target: {fileID: 1578759378220870966, guid: e0d76ea104553b943937f3836ed7c520, type: 3}
-      propertyPath: m_Name
-      value: Task
-      objectReference: {fileID: 0}
-    - target: {fileID: 8109048277552426415, guid: e0d76ea104553b943937f3836ed7c520, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.99
-      objectReference: {fileID: 0}
-    - target: {fileID: 8109048277552426415, guid: e0d76ea104553b943937f3836ed7c520, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8109048277552426415, guid: e0d76ea104553b943937f3836ed7c520, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.061863616
-      objectReference: {fileID: 0}
-    - target: {fileID: 8109048277552426415, guid: e0d76ea104553b943937f3836ed7c520, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8109048277552426415, guid: e0d76ea104553b943937f3836ed7c520, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8109048277552426415, guid: e0d76ea104553b943937f3836ed7c520, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8109048277552426415, guid: e0d76ea104553b943937f3836ed7c520, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8109048277552426415, guid: e0d76ea104553b943937f3836ed7c520, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8109048277552426415, guid: e0d76ea104553b943937f3836ed7c520, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8109048277552426415, guid: e0d76ea104553b943937f3836ed7c520, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e0d76ea104553b943937f3836ed7c520, type: 3}
 --- !u!1001 &3678883020962670546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19340,6 +19417,10 @@ PrefabInstance:
       propertyPath: aiPrompt
       value: Your name is daniel.
       objectReference: {fileID: 0}
+    - target: {fileID: 6068293365679127549, guid: cb778c3cc0647a24f96309774fb12dac, type: 3}
+      propertyPath: artifactId
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6102466988585600965, guid: cb778c3cc0647a24f96309774fb12dac, type: 3}
       propertyPath: m_LocalPosition.x
       value: -25.035313
@@ -19402,3 +19483,4 @@ SceneRoots:
   - {fileID: 1629702066}
   - {fileID: 1983374489}
   - {fileID: 1106430049}
+  - {fileID: 1941702868}

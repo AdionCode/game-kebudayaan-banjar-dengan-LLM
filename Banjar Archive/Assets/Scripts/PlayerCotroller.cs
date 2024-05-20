@@ -57,8 +57,11 @@ public class PlayerCotroller : MonoBehaviour
     {
         playerHaveItem = false;
         TMP.text = "";
-        llmScript = llm.GetComponent<LLM>();
-        llmUi = llm.GetComponent<InfoUIMaster>();
+        if(llm != null)
+        {
+            llmScript = llm.GetComponent<LLM>();
+            llmUi = llm.GetComponent<InfoUIMaster>();
+        }
     }
     private void Update()
     {
@@ -99,7 +102,10 @@ public class PlayerCotroller : MonoBehaviour
             {
                 if (ArtifactItemScript.artifactId == ArtifactScript.artifactId)
                 {
-                    SetupLLM();
+                    if(llm != null)
+                    {
+                        SetupLLM();
+                    }
                     ArtifactScript.Nyalakan();
                     Destroy(artifactInPocket);
                     GM.AddScore();

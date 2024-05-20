@@ -10,10 +10,19 @@ public class InfoUIMaster : MonoBehaviour
     [SerializeField] TMP_Text judul;
     [SerializeField] GameObject uiLLM;
 
+    [SerializeField] Sprite defaultImg;
+    [TextArea]
+    [SerializeField] string defaultPrompt;
+
     public void SetUiArtifak(Sprite img, string text)
     {
         gambarJudul.GetComponent<Image>().sprite = img;
         judul.text = text;
+    }
+
+    public void SetUiArtifak()
+    {
+
     }
 
     public void exitUi()
